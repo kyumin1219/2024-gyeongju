@@ -1,0 +1,84 @@
+*{margin: 0; padding: 0; box-sizing: border-box; line-height: 1.5em;}
+body{width: 100%;}
+section{position: relative;}
+.container{width: 1320px; position: relative; margin: 0 auto;}
+ul, li{list-style: none;}
+input{display: none;}
+a, label, button{cursor: pointer; color: black; display: inline-block; text-decoration: none; border: none;}
+img{max-width: 100%;}
+
+.f, .fc, .fb, .fla{display: flex;}
+.fc{justify-content: center;}
+.fb{justify-content: space-between;}
+.fla{justify-content: space-around;}
+.r{display: flex; flex-flow: column;}
+.rc{display: flex; flex-flow: column; justify-content: center;}
+.rb{display: flex; flex-flow: column; justify-content: space-between;}
+.re{display: flex; flex-flow: column; justify-content: flex-end;}
+.cc{display: flex; flex-flow: column; justify-content: center; align-items: center;}
+.hc{align-items: center;}
+.tc{text-align: center;}
+
+.mts{margin-top: .25vw;}
+.mt1{margin-top: .5vw;}
+.mt2{margin-top: 1vw;}
+.mt3{margin-top: 1.5vw;}
+.mt4{margin-top: 2vw;}
+.mt5{margin-top: 2.5vw;}
+.mt6{margin-top: 3vw;}
+.mt7{margin-top: 3.5vw;}
+.mt8{margin-top: 4vw;}
+.mt9{margin-top: 4.5vw;}
+.mt10{margin-top: 5vw;}
+.mt20{padding-top: 7vw; padding-bottom: 7vw;}
+.mtm20{margin-top: 10vw;}
+
+.cp1{color: #A0F9C4;}
+.cp2{color: #CFFFE2;}
+.cp3{color: #3CC67A;}
+.cp{color: #8b8b8b;}
+.cp5{color: #EFD120;}
+.cp6{color: #F7E279;}
+
+.title2{font-size: 72px; font-weight: 400; font-family: "Impact"; line-height: 80px; color: #3CC67A;}
+.title3{font-size: 36px; font-weight: 400; font-family: "Impact"; color: #3CC67A;}
+.f60{font-size: 3.5em; font-weight: bold; font-family: "맑은 고딕"; letter-spacing: -2px;}
+.f40{font-size: 40px; font-weight: bold; font-family: "맑은 고딕"; letter-spacing: -2px;}
+.f30{font-size: 30px; font-weight: bold; font-family: "맑은 고딕"; letter-spacing: -1px;}
+.f28{font-size: 28px; font-weight: bold; font-family: "맑은 고딕"; letter-spacing: -1px;}
+.f24{font-size: 24px; font-weight: bold; font-family: "맑은 고딕"; letter-spacing: -1px;}
+.f21{font-size: 21px; font-weight: bold; font-family: "맑은 고딕"; letter-spacing: -1px;}
+.f18{font-size: 18px; font-weight: bold; font-family: "맑은 고딕";}
+.f16{font-size: 16px; font-weight: bold; font-family: "맑은 고딕";}
+.f14{font-size: 14px; font-weight: bold; font-family: "맑은 고딕";}
+
+.middle{display: inline-block;}
+.middle div{display: flex;}
+.middle p{white-space: nowrap;}
+.middle span{display: inline-block; margin-left: 5px; background-color: #3CC67A; height: 2px; width: 100%;}
+
+.btn{position: relative; display: inline-flex; height: 45px; align-items: center; transition: all .5s; border-radius: 45px; overflow: hidden; background-color: #EFD120; color: white; font-size: 21px; font-weight: bold; font-family: "Myriad-Pro"; padding: 0 20px;}
+.btn::after{content: ""; position: absolute; background-color: #F7E279; width: 0; height: 0; border-radius: 50%; left: 50%; bottom: 0; transform: translate(-50%, 50%); transition: all .5s;}
+.btn1{position: relative; display: inline-flex; height: 45px; align-items: center; transition: all .5s; border-radius: 45px; overflow: hidden; background-color: white; color: #3CC67A; font-size: 21px; font-weight: bold; font-family: "Myriad-Pro"; padding: 0 20px;}
+.btn1::after{content: ""; position: absolute; background-color: #3CC67A; width: 0; height: 0; border-radius: 50%; left: 50%; bottom: 0; transform: translate(-50%, 50%); transition: all .5s;}
+.btn:hover::after, .btn1:hover::after{width: 300px; height: 300px;}
+.btn span, .btn1 span{z-index: 10; position: relative;}
+.btn1:hover{color: white;}
+.Bbtn:has(.btn){position: absolute; bottom: 10%; right: 10%;}
+.Bbtn .btn:not(:first-child){margin-left: 20px;}
+
+.logo{width: 80px;}
+header .aa{text-decoration: underline;}
+header{width: 100%; position: fixed; background-color: transparent; z-index: 99999; padding-top: 30px;}
+header nav{width: 85%; border-bottom: 1px solid black;}
+header nav ul a, header nav ul label{padding: 0.5vw 1vw;}
+header nav ul>li{position: relative; display: flex; align-items: center; justify-content: center;}
+header nav ul>li::after{content: ""; position: absolute; width: 10%; height: 45px; left: 50%; transform: translate(-200%, 10%); transition: all .5s; opacity: 0; z-index: -10; border-radius: 45px; background-color: #3CC67A;}
+header nav ul>li:hover::after{width: 110%; transform: translate(-50%, 10%); opacity: 1;}
+
+header nav ul ul {opacity: 0; position: absolute; top: -50%; width: 110%; text-align: center; transition: all .3s; margin-top: 10px; white-space: nowrap;}
+header nav ul li:hover ul {opacity: 1; top: 90px;}
+
+footer{padding: 2vw; background-color: #3CC67A; border-top: 30px #A0F9C4; height: 180px; bottom: 0;}
+footer p{color: white;}
+footer .fe i:first-child:hover {font-size: 50px !important; transition: all .5s;}

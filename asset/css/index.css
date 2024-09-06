@@ -1,0 +1,313 @@
+@import url("./set.css");
+
+/* 요소 */
+.element1{position: absolute; right: 0; top: 1200px;}
+.element2{position: absolute; left: -100px; top: 1800px;}
+.element3{position: absolute; right: 0px; top: 3100px;}
+
+/* 비쥬얼 */
+.visual{width: 100%; height: 100%; position: relative; overflow: hidden;}
+.visual_box{width: 600px; height: 1080px; background: linear-gradient(to bottom, #defdeb, #3CC67A); top: 0; left: 0; position: absolute;}
+.visual_img{width: 1920px; height: 1080px; position: relative; left: 0; z-index: -10;}
+.visual_btn{position: absolute; top: 70%; left: 15%;}
+.visual_slide{width: 300%; height: 100%; position: relative; z-index: -1; left: 0; animation: slide 9s infinite;}
+
+.mini_slide{width: 300px; height: 200px; position: absolute; top: 65%; left: 24%; z-index: 100; overflow: hidden; border-radius: 25px; box-shadow: 0 0 30px rgb(151, 151, 151);}
+.mini_slide ul{width: calc(100% * 3); height: 100%; position: relative; animation: slide1 9s infinite; left: -100%;}
+.mini_slide ul li{width: calc(100% / 3); height: 100%; position: relative;}
+.mini_slide ul li img{width: 100%; height: 100%; position: relative;}
+
+.visual_btn span::after{content: "||"; z-index: 10;}
+
+input[id="stop"]:checked~.visual_slide{animation-play-state: paused;}
+input[id="stop"]:checked~.visualText{animation-play-state: paused;}
+input[id="stop"]:checked~.visual_btn span::after{content: "▶";}
+
+@keyframes slide {
+    0% {left: 100%;}
+    32% {left: 100%;}
+    33% {left: 0%;}
+    65% {left: 0%;}
+    66% {left: -100%;}
+    99% {left: -100%;}
+    100% {left: 100%;}
+}
+
+@keyframes slide1 {
+    10% {left: -100%;}
+    32% {left: -100%;}
+    33% {left: -200%;}
+    65% {left: -200%;}
+    66% {left: 0%;}
+    99% {left: 0%;}
+    100% {left: -100%;}
+}
+
+.visual_text {width: 60%; height: 50%; position: absolute; left: 15%; top: 50%; transform-style: preserve-3d; animation: textSlide 9s infinite;}
+.visual_text > li {width: 100%; height: 100%; position: absolute; backface-visibility: hidden; transform-style: preserve-3d;}
+.visual_text > li > h1{font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 70px; color: white; line-height: 1em;}
+
+.visual_text li:nth-child(1){transform: rotateX(-0deg) translateZ(120px);}
+.visual_text li:nth-child(2){transform: rotateX(-120deg) translateZ(120px);}
+.visual_text li:nth-child(3){transform: rotateX(-240deg) translateZ(120px);}
+
+@keyframes textSlide {
+    0%       {transform: rotateX(0deg);}
+    27.3333% {transform: rotateX(0deg);}
+    33.3333% {transform: rotateX(-120deg);}
+    60.6666% {transform: rotateX(-120deg);}
+    66.6666% {transform: rotateX(-240deg);}
+    94%      {transform: rotateX(-240deg);}
+    100%     {transform: rotateX(-360deg);}
+}
+
+.visual .line{width: 300px; height: 12px; border-radius: 10px; position: absolute; overflow: hidden; box-shadow: 0 0 30px rgb(151, 151, 151); top: 70%; left: 25%;}
+.visual .line::after{content: ""; position: absolute; top: 0; left: 0; background-color: #EFD120; width: 0%; height: 100%; animation: pro 8s infinite linear;}
+@keyframes pro {
+    0%{width: 0%;}
+    100%{width: 100%;}
+}
+
+/* 핫스팟 */
+.hotspot{width: 50%; height: 50%; position: relative; overflow: hidden; box-shadow: 0 0 30px rgb(151, 151, 151); border-radius: 25px;}
+.hotspot img{width: 100%; height: 100%; position: relative; transition: all .5s; z-index: 10;}
+.hotspot div{width: 500px; padding: 30px; box-shadow: 0 0 30px rgb(151, 151, 151); border-radius: 25px; background-color: white; transition: all .5s;}
+
+.hotspot .item1{position: absolute; top: 150px; left: 100px; z-index: 11; opacity: 0;}
+.hotspot .item2{position: absolute; top: 300px; left: 400px; z-index: 11; opacity: 0;}
+.hotspot .item3{position: absolute; top: 600px; left: 400px; z-index: 11; opacity: 0;}
+.hotspot .item4{position: absolute; top: 300px; left: 250px; z-index: 11; opacity: 0;}
+.hotspot .item5{position: absolute; top: 400px; left: 500px; z-index: 11; opacity: 0;}
+.hotspot .item6{position: absolute; top: 600px; left: 500px; z-index: 11; opacity: 0;}
+
+#hotspot2:checked ~ .hotspot .item1:hover{opacity: 1;}
+#hotspot3:checked ~ .hotspot .item2:hover{opacity: 1;}
+#hotspot4:checked ~ .hotspot .item3:hover{opacity: 1;}
+#hotspot5:checked ~ .hotspot .item4:hover{opacity: 1;}
+#hotspot6:checked ~ .hotspot .item5:hover{opacity: 1;}
+#hotspot7:checked ~ .hotspot .item6:hover{opacity: 1;}
+
+#hotspot2:checked ~ .hotspot .item1{z-index: 12;}
+#hotspot3:checked ~ .hotspot .item2{z-index: 12;}
+#hotspot4:checked ~ .hotspot .item3{z-index: 12;}
+#hotspot5:checked ~ .hotspot .item4{z-index: 12;}
+#hotspot6:checked ~ .hotspot .item5{z-index: 12;}
+#hotspot7:checked ~ .hotspot .item6{z-index: 12;}
+
+#hotspot1:checked ~ .hotspot img{transform: scale(1);}
+#hotspot2:checked ~ .hotspot img{transform: scale(2.5); transform-origin: 0px 0px;}
+#hotspot3:checked ~ .hotspot img{transform: scale(2.5); transform-origin: 100px 300px;}
+#hotspot4:checked ~ .hotspot img{transform: scale(2.5); transform-origin: 500px 500px;}
+#hotspot5:checked ~ .hotspot img{transform: scale(2.5); transform-origin: 500px 1200px;}
+#hotspot6:checked ~ .hotspot img{transform: scale(2.5); transform-origin: 1300px 1200px;}
+#hotspot7:checked ~ .hotspot img{transform: scale(2.5); transform-origin: 1300px 700px;}
+
+/* 경주사계 */
+.four{margin-bottom: 200px;}
+.four .btns {width: 25%; height: 100px; position: absolute; right: 0; z-index: 10;}
+.four .btns label {width: 25%;}
+.four .btns label .img{ transition: all .5s; display: inline-block; transform: scale(.7);}
+
+.four .btns .line{position: absolute; width: 100%; left: 0; height: 8px; border-radius: 10px; background-color: rgba(0, 0, 0, 0.201); bottom: 25%;}
+.four .btns .line::after{position: absolute;width: 25%;border-radius: 10px; height: 100%; background-color: #EFD120; content: ""; transition: all .5s;}
+#four1:checked ~ div .btns .line::after{left: 0%;}
+#four2:checked ~ div .btns .line::after{left: 25%;}
+#four3:checked ~ div .btns .line::after{left: 50%;}
+#four4:checked ~ div .btns .line::after{left: 75%;}
+.four .btns label span {margin-top: 5px;color: #444444; text-align: center; transition: all 1s;}
+#four1:checked ~ div .btns label:nth-child(1) span:nth-child(1){color: #EFD120;}
+#four2:checked ~ div .btns label:nth-child(2) span:nth-child(1){color: #EFD120;}
+#four3:checked ~ div .btns label:nth-child(3) span:nth-child(1){color: #EFD120;}
+#four4:checked ~ div .btns label:nth-child(4) span:nth-child(1){color: #EFD120;}
+
+.four .items{width: 100%; height: 300px; position: relative;}
+.four .items .item{width: 100%; position: absolute; opacity: 0; z-index: 0; transition: all .5s; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 30px;}
+.four .items .item li{width: 300px; height: 200px; position: relative; border-radius: 25px; box-shadow: 0 0 30px rgb(151, 151, 151); transition: all .5s; overflow: hidden;}
+.four .items .item li img{width: 100%; height: 100%; object-fit: cover;}
+
+.four .items .item li:hover .partner_text{opacity: 1; z-index: 10;}
+.four .items .item li:hover .partner_text::after{opacity: 0.3; z-index: 10;}
+.four .items .item li:hover .partner_text p{opacity: 1; z-index: 11;}
+
+#four1:checked ~ .items .item1{opacity: 1; z-index: 3;}
+#four2:checked ~ .items .item2{opacity: 1; z-index: 3;}
+#four3:checked ~ .items .item3{opacity: 1; z-index: 3;}
+#four4:checked ~ .items .item4{opacity: 1; z-index: 3;}
+
+/* 문화행사 */
+.event{display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;}
+.event li{width: 300px; height: 300px; position: relative; border-radius: 25px; box-shadow: 0 0 30px rgb(151, 151, 151); overflow: hidden;}
+.event li div{width: 100%; height: 100%; position: absolute; z-index: 0; top: 0; left: 0; opacity: 0; transition: all .5s;}
+.event li div:after{content: ""; width: 100%; height: 100%; position: absolute; background-color: black; opacity: 0; z-index: 0;}
+.event li div p{position: relative; color: white; z-index: 11;}
+
+.event li:hover{transform: scale(1.2);}
+.event li:hover div{opacity: 1; z-index: 10;}
+.event li:hover div::after{opacity: .3; z-index: 10;}
+
+.Amodal.event {display: none; background-color: white !important; width: 600px;padding: 40px; height: 400px;border-radius: 40px;z-index: 300; background-color: white;box-shadow: 0 0 30px rgba(118, 118, 118, 0.435); position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); animation: modalDrop .5s;}
+.Amodal input{display: inline;}
+.event img{width: 300px; height: 300px;}
+
+input[id="event1"]:checked~.Amodal.event1{display: inline;}
+input[id="event2"]:checked~.Amodal.event2{display: inline;}
+input[id="event3"]:checked~.Amodal.event3{display: inline;}
+input[id="event4"]:checked~.Amodal.event4{display: inline;}
+input[id="event5"]:checked~.Amodal.event5{display: inline;}
+input[id="event6"]:checked~.Amodal.event6{display: inline;}
+input[id="event7"]:checked~.Amodal.event7{display: inline;}
+input[id="event8"]:checked~.Amodal.event8{display: inline;}
+
+@keyframes modalDrop {
+    from {
+        transform: translate(-50%, -250%);
+    }
+    to {
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* 경주축제통계 */
+.statistics{width: 100%; border-collapse: collapse; margin-top: 20px;}
+.statistics thead th{background: rgb(151, 151, 151); color: #fff; padding: 10px; text-align: left;}
+.statistics tbody td{padding: 10px; border: 1px solid #ddd; text-align: left;}
+.statistics tbody tr:hover td{background: #EFD120;}
+.statistics thead th:hover{background: #F7E279;}
+
+.statistics:has(thead tr th:hover:nth-child(1)) tbody tr:nth-child(1) td:nth-child(1){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(1)) tbody tr:nth-child(2) td:nth-child(1){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(1)) tbody tr:nth-child(3) td:nth-child(1){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(1)) tbody tr:nth-child(4) td:nth-child(1){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(1)) tbody tr:nth-child(5) td:nth-child(1){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(1)) tbody tr:nth-child(6) td:nth-child(1){background-color: #F7E279;}
+
+.statistics:has(thead tr th:hover:nth-child(2)) tbody tr:nth-child(1) td:nth-child(2){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(2)) tbody tr:nth-child(2) td:nth-child(2){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(2)) tbody tr:nth-child(3) td:nth-child(2){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(2)) tbody tr:nth-child(4) td:nth-child(2){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(2)) tbody tr:nth-child(5) td:nth-child(2){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(2)) tbody tr:nth-child(6) td:nth-child(2){background-color: #F7E279;}
+
+.statistics:has(thead tr th:hover:nth-child(3)) tbody tr:nth-child(1) td:nth-child(3){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(3)) tbody tr:nth-child(2) td:nth-child(3){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(3)) tbody tr:nth-child(3) td:nth-child(3){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(3)) tbody tr:nth-child(4) td:nth-child(3){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(3)) tbody tr:nth-child(5) td:nth-child(3){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(3)) tbody tr:nth-child(6) td:nth-child(3){background-color: #F7E279;}
+
+.statistics:has(thead tr th:hover:nth-child(4)) tbody tr:nth-child(1) td:nth-child(4){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(4)) tbody tr:nth-child(2) td:nth-child(4){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(4)) tbody tr:nth-child(3) td:nth-child(4){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(4)) tbody tr:nth-child(4) td:nth-child(4){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(4)) tbody tr:nth-child(5) td:nth-child(4){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(4)) tbody tr:nth-child(6) td:nth-child(4){background-color: #F7E279;}
+
+.statistics:has(thead tr th:hover:nth-child(5)) tbody tr:nth-child(1) td:nth-child(5){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(5)) tbody tr:nth-child(2) td:nth-child(5){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(5)) tbody tr:nth-child(3) td:nth-child(5){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(5)) tbody tr:nth-child(4) td:nth-child(5){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(5)) tbody tr:nth-child(5) td:nth-child(5){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(5)) tbody tr:nth-child(6) td:nth-child(5){background-color: #F7E279;}
+
+.statistics:has(thead tr th:hover:nth-child(6)) tbody tr:nth-child(1) td:nth-child(6){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(6)) tbody tr:nth-child(2) td:nth-child(6){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(6)) tbody tr:nth-child(3) td:nth-child(6){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(6)) tbody tr:nth-child(4) td:nth-child(6){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(6)) tbody tr:nth-child(5) td:nth-child(6){background-color: #F7E279;}
+.statistics:has(thead tr th:hover:nth-child(6)) tbody tr:nth-child(6) td:nth-child(6){background-color: #F7E279;}
+
+/* 로그인 */
+.Amodal.login {display: none; background-color: white !important; width: 600px;padding: 40px; height: 350px;border-radius: 40px;z-index: 300; background-color: white;box-shadow: 0 0 30px rgba(118, 118, 118, 0.435); position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); animation: modalDrop .5s;}
+.Amodal input{display: inline;}
+input[id="login"]:checked~.Amodal.login{display: inline;}
+
+/* 회원가입 */
+.Amodal.sign {display: none; background-color: white !important; width: 600px;padding: 40px; height: 450px;border-radius: 40px;z-index: 300; background-color: white;box-shadow: 0 0 30px rgba(118, 118, 118, 0.435); position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); animation: modalDrop .5s;}
+input[id="sign"]:checked~.Amodal.sign{display: inline;}
+
+/* 여행코스추천 */
+.cos{margin-bottom: 200px;}
+
+.cos .btns {width: 30%; height: 100px; position: absolute; right: 0; z-index: 10;}
+.cos .btns .line{position: absolute; width: 100%; left: 0; height: 8px; border-radius: 10px; background-color: rgba(0, 0, 0, 0.201); bottom: 25%;}
+.cos .btns .line::after{position: absolute;width: 33.333%;border-radius: 10px; height: 100%; background-color: #EFD120; content: ""; transition: all .5s;}
+#cos1:checked ~ div .btns .line::after{left: 0%;}
+#cos2:checked ~ div .btns .line::after{left: 33.333%;}
+#cos3:checked ~ div .btns .line::after{left: 66.666%;}
+.cos .btns label span {margin-top: 5px;color: #444444; text-align: center; transition: all 1s;}
+#cos1:checked ~ div .btns label:nth-child(1) span:nth-child(1){color: #EFD120;}
+#cos2:checked ~ div .btns label:nth-child(2) span:nth-child(1){color: #EFD120;}
+#cos3:checked ~ div .btns label:nth-child(3) span:nth-child(1){color: #EFD120;}
+
+.cos .items{width: 100%; height: 300px; position: relative;}
+.cos .items .item{width: 100%; position: absolute; opacity: 0; z-index: 0; transition: all .5s;}
+.cos .items .item li{width: 200px; height: 350px; position: relative; border-radius: 25px; box-shadow: 0 0 30px rgb(151, 151, 151); overflow: hidden;}
+.cos .items .item li img{width: 100%; height: 80%; object-fit: cover;}
+
+#cos1:checked ~ .items .item1{opacity: 1; z-index: 3;}
+#cos2:checked ~ .items .item2{opacity: 1; z-index: 3;}
+#cos3:checked ~ .items .item3{opacity: 1; z-index: 3;}
+
+
+/* 조직도 */
+.chart { width: 100%; position: relative; }
+
+.chart span:only-of-type {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chart .item1 > li:nth-child(1) > span {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+}
+
+.chart .item2 > li:nth-child(1) > span {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+}
+
+.chart .item2 > li:nth-child(1) ul {
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+
+
+.chart .item1 > li:nth-child(2) > span {
+    position: relative;
+    left: -30%;
+}
+
+
+
+.chart .item1 > li:nth-child(3) > span {
+    position: relative;
+    left: 55%;
+}
+
+
+.chart .item2 > li:nth-child(2) > span {
+    position: relative;
+    left: 40%;
+}
+
+.chart .item5 > li:nth-child(1) > span {
+    position: relative;
+    left: -25%;
+}
+
+.chart .item7 > li:nth-child(1) > span {
+    position: relative;
+    left: -5%;
+}
+
+.chart .item7 > li:nth-child(2) > span {
+    position: relative;
+    left: 15%;
+}
