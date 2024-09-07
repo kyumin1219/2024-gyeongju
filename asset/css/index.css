@@ -7,8 +7,8 @@
 
 /* 비쥬얼 */
 .visual{width: 100%; height: 100%; position: relative; overflow: hidden;}
-.visual_box{width: 600px; height: 1080px; background: linear-gradient(to bottom, #defdeb, #3CC67A); top: 0; left: 0; position: absolute;}
-.visual_img{width: 1920px; height: 1080px; position: relative; left: 0; z-index: -10;}
+.visual_box{width: 600px; height: 100vh; background: linear-gradient(to bottom, #defdeb, #3CC67A); top: 0; left: 0; position: absolute;}
+.visual_img{width: 100vw; height: 100vh; position: relative; left: 0; z-index: -10;}
 .visual_btn{position: absolute; top: 70%; left: 15%;}
 .visual_slide{width: 300%; height: 100%; position: relative; z-index: -1; left: 0; animation: slide 9s infinite;}
 
