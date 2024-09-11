@@ -8,41 +8,54 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- 로그인 -->
+    <input type="checkbox" id="login" name="login">
+    <div class="Amodal login">
+        <div class="middle">
+            <h2 class="title3">LOGIN</h2>
+            <div class="f hc mts">
+                <p class="f21 cp3">로그인</p>
+                <span></span>
+            </div>
+        </div>
+        <ul class="mt3">
+            <li class="fb mt2 f21">아이디: <input type="text"></li>
+            <li class="fb mt2 f21">비밀번호: <input type="text"></li>
+        </ul>
+        <div class="Bbtn f">
+            <label for="login" class="btn"><span>확인</span></label>
+        </div>
+    </div>
+    
+    <!-- 회원가입 -->
+    <input type="checkbox" id="sign" name="sign">
+    <div class="Amodal sign">
+        <div class="middle">
+            <h2 class="title3">SIGN UP</h2>
+            <div class="f hc mts">
+                <p class="f21 cp3">회원가입</p>
+                <span></span>
+            </div>
+        </div>
+        <ul class="mt3">
+            <li class="fb mt2 f21">아이디: <input type="text"></li>
+            <li class="fb mt2 f21">비밀번호: <input type="text"></li>
+            <li class="fb mt2 f21">성명: <input type="text"></li>
+            <li class="fb mt2 f21">회원구분: <input type="text"></li>
+        </ul>
+        <div class="Bbtn f">
+            <label for="sign" class="btn"><span>확인</span></label>
+        </div>
+    </div>
     <header>
-        <!-- 헤더 -->
-        <div class="container mt2 fb">
+        <div class="container fb">
             <a href="./index.html" class="logo"><img src="./asset/img/logo(main).png" alt="img" title="img"></a>
             <nav class="fb">
                 <ul class="mainTab f21 fb">
-                    <li><a href="#">경주여행</a>
-                        <ul>
-                            <li><a href="#">이벤트</a></li>
-                            <li><a href="./sub1.html">여행코스추천</a></li>
-                            <li><a href="#">테마여행</a></li>
-                            <li><a href="#">경주의 자연</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">문화행사</a>
-                        <ul>
-                            <li><a href="#">이달의 축제행사</a></li>
-                            <li><a href="#">정기 축제행사</a></li>
-                            <li><a href="#">공연전시 정보</a></li>
-                            <li><a href="#">해외공연 정보</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">안내</a>
-                        <ul>
-                            <li><a href="#">조직도</a></li>
-                            <li><a href="#">공지사항</a></li>
-                            <li><a href="#">홍보영상</a></li>
-                            <li><a href="#">여행책자</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">나의여행</a>
-                        <ul>
-                            <li><a href="#">투어택시예약</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="./sub1.html">여행코스추천</a></li>
+                    <li><a href="./sub2.html">문화행사</a></li>
+                    <li><a href="./stamp.html">명소 알아보기</a></li>
+                    <li><a href="./sub3.html">나의여행</a></li>
                 </ul>
                 <ul class="userTab fb f18">
                     <li><label for="login">로그인</label></li>
@@ -51,7 +64,6 @@
                 </ul>
             </nav>
         </div>
-        <!-- 헤더 -->
     </header>
     <main>
         <!-- 서브페이지 -->
