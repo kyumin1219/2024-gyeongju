@@ -6,7 +6,7 @@ var hp = {
             hp.lData = JSON.parse(localStorage['lData']);
         }
 
-        $.getJSON('/asset/json/hot.json', data => {
+        $.getJSON('./asset/json/hot.json', data => {
             data.imgs.forEach((val, key) => {
                 $('.hWrap .listWrap').append(`<div onclick="hp.setImg('./asset/img/${data.imgdir}${val.name}', '${val.name.replace('.png', '').replace('.jpg', '')}');" style="background: url(/asset/img/${data.imgdir}${val.name}) no-repeat -200px -200px/800px;"></div>`);
                 if (val.name.indexOf(hp.lData.tName) != -1) hp.setImg(`./asset/img/${data.imgdir}${val.name}`, `${val.name.replace('.png', '').replace('.jpg', '')}`);
@@ -258,7 +258,7 @@ var hp = {
 
 var kw = {
     set() {
-        $.getJSON('/asset/json/keywords.json', data => {
+        $.getJSON('./asset/json/keywords.json', data => {
             kw.tData = data.data.sort((a, b) => b.frequency - a.frequency);
 
             kw.tData.forEach(val => {
