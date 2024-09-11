@@ -82,3 +82,8 @@ header nav ul li:hover ul {opacity: 1; top: 90px;}
 footer{padding: 2vw; background-color: #3CC67A; border-top: 30px #A0F9C4; height: 180px; bottom: 0;}
 footer p{color: white;}
 footer .fe i:first-child:hover {font-size: 50px !important; transition: all .5s;}
+
+/* modal */
+.Bmodal{z-index: 11000; width: 100%; height: 100vh; position: fixed;top: 0;left: 0; display: none;}
+.Bmodal .background{z-index: 1; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.304);}
+.Bmodal .box{z-index: 10; width: 1000px; height: 850px;position: absolute; border-radius: 20px; background-color: aliceblue; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px;}

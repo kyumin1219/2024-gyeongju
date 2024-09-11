@@ -1,0 +1,79 @@
+{
+  "labels_kr" : ["별점","리뷰","방문자","재방문자","주차대수","관리도"],
+  "labels_en": ["star", "review", "visitant", "returning_visitor", "parking", "managed"],
+  
+  "data": [
+    {
+      "name": "독립기념관",
+      "latitude": 36.7845,
+      "longitude": 127.2214,
+      "star" : 80,
+      "review" : 40,
+      "visitant" : 40,
+      "returning_visitor" : 75,
+      "parking": 65,
+      "managed": 90
+    },
+    {
+      "name": "성성호수공원",
+      "latitude": 36.8483,
+      "longitude": 127.1354,
+      "star" : 90,
+      "review" : 60,
+      "visitant" : 50,
+      "returning_visitor" : 75,
+      "parking": 25,
+      "managed": 95
+    },
+    {
+      "name": "아라리오조각광장",
+      "latitude": 36.8193,
+      "longitude": 127.1569 ,
+      "star" : 55,
+      "review" : 80,
+      "visitant" : 85,
+      "returning_visitor" : 25,
+      "parking": 80,
+      "managed": 15
+    },
+    {
+      "name": "유관순열사 사적지",
+      "latitude": 36.7597,
+      "longitude": 127.3078,
+      "star" : 65,
+      "review" : 70,
+      "visitant" : 65,
+      "returning_visitor" : 50,
+      "parking": 70,
+      "managed": 30
+    },
+    {
+      "name": "태조산왕건길과 청동대좌불",
+      "latitude": 36.8342,
+      "longitude": 127.1965 ,
+      "star" : 20,
+      "review" : 15,
+      "visitant" : 50,
+      "returning_visitor" : 40,
+      "parking": 40,
+      "managed": 50
+    },
+    {
+      
+      "name": "천안삼거리공원",
+      "latitude": 36.7845,
+      "longitude": 127.1666,
+      "star" : 100,
+      "review" : 80,
+      "visitant" : 95,
+      "returning_visitor" : 60,
+      "parking": 30,
+      "managed": 100
+      },
+    {
+      "name": "user",
+      "latitude": 36.8153,
+      "longitude": 127.1137
+      }
+  ]
+}

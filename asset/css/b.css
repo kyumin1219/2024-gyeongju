@@ -1,0 +1,354 @@
+#wrap {
+    margin: 50px auto;
+    width: 1320px;
+    min-height: calc(100vh - 300px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hWrap {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 30px 0;
+}
+
+.hWrap .listWrap {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 1000px;
+}
+
+.hWrap .listWrap>div {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.hWrap .vWrap {
+    display: flex;
+    width: 100%;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    height: 800px;
+}
+
+.hWrap .vWrap>div {
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+}
+
+.hWrap .vWrap .iWrap {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 15px 0;
+    flex:1;
+    padding:20px;
+    position:relative;
+    z-index: 10;
+}
+
+.hWrap .vWrap .iWrap input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    border:1px solid #ccc;
+    padding:10px;
+}
+
+.hWrap .vWrap .iWrap textarea {
+    width: 100%;
+    border:1px solid #ccc;
+    height: 150px;
+    resize: none;
+    padding:10px;
+}
+
+.hWrap .vWrap .iWrap .spot {
+    cursor: pointer;
+}
+
+.hWrap .vWrap .cWrap {
+    border-left:none;
+    border-right:none;
+    overflow: hidden;
+    position:relative;
+    --size: 800px;
+    width: var(--size);
+    height: var(--size);
+    perspective: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hWrap .vWrap .cWrap .pWrap {
+    position: absolute; 
+    transform-style: preserve-3d;
+    width: 2000px;
+    height: 2000px;
+}
+
+.hWrap .vWrap .cWrap .pWrap>div {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+.hWrap .vWrap .cWrap .pWrap>div.front{ transform: translateZ(-995px); }
+.hWrap .vWrap .cWrap .pWrap>div.back{ transform: rotateY(180deg) translateZ(-995px); }
+.hWrap .vWrap .cWrap .pWrap>div.left{ transform: rotateY(90deg) translateZ(-995px); left:0; }
+.hWrap .vWrap .cWrap .pWrap>div.right{ transform: rotateY(-90deg) translateZ(-995px); right:0; }
+.hWrap .vWrap .cWrap .pWrap>div.top{ transform: rotateX(-90deg) translateZ(-995px); }
+.hWrap .vWrap .cWrap .pWrap>div.bottom{ transform: rotateX(90deg) translateZ(-995px); }
+
+.hWrap .vWrap .cWrap .poi {
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    width: 1px;
+    height: 1px;
+    align-items: flex-end;
+}
+
+.hWrap .vWrap .cWrap .poi img {
+    width: 40px;
+    height: 60px;
+    max-width: 100000%;
+}
+
+.hWrap .vWrap .cWrap .poi .info {
+    background-color: #fff;
+    border:1px solid #ccc;
+    border-radius:3px;
+    padding:5px;
+    flex-flow: column;
+    align-items: center;
+    gap: 10px 0;
+    position:absolute;
+    bottom: 70px;
+    display: none;
+}
+
+.hWrap .vWrap .cWrap .poi:hover .info {
+    display: flex;
+}
+
+.hWrap .vWrap .cWrap .poi .info * {
+    white-space: nowrap;
+}
+
+.hWrap .vWrap .lWrap {
+    flex:1;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    gap: 10px 0;
+}
+
+.hWrap .vWrap .lWrap .row {
+    display: flex;
+    height: 40px;
+    gap: 0 5px;
+}
+
+.hWrap .vWrap .lWrap .row a {
+    border:1px solid #ccc;
+    flex:1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hWrap .vWrap .lWrap .row button {
+    border:none;
+    background-color: #000;
+    color:#fff;
+    text-align: center;
+    width: 50px;
+}
+
+.kWrap {
+    display: flex;
+    height: 600px;
+    gap: 0 30px;
+}
+
+.kWrap .wcWrap {
+    width: 600px;
+    height: 100%;
+    background-color: #fafeff;
+    position:relative;
+    border:1px solid #ccc;
+}
+
+.kWrap .wcWrap .word {
+    line-height:1;
+    font-weight:bold;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.kWrap .wcWrap .word span {
+    position: absolute;
+    bottom: 101%;
+    background-color: #fff;
+    padding:5px;
+    font-size: 18px;
+    color:#000;
+    white-space: nowrap;
+    display: none;
+    border:1px solid #ccc;
+    z-index: 100;
+}
+
+.kWrap .wcWrap .word:hover span {
+    display: block;
+}
+
+.kWrap .tWrap {
+    flex:1;
+    height: 100%;
+    overflow: auto;
+}
+
+.kWrap .tWrap table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.kWrap .tWrap table thead {
+    background-color: #000;
+    color:#fff;
+}
+
+.kWrap .tWrap table th,
+.kWrap .tWrap table td {
+    padding:5px 0;
+    border:1px solid #ccc;
+}
+.kWrap .tWrap table td input{display: inline;}
+
+.chWrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position:relative;
+}
+
+.chWrap .arrows {
+    font-size: 30px;
+    position:absolute;
+}
+
+.chWrap .arrows.left {
+    left:0;
+    display: none;
+}
+
+.chWrap .arrows.right {
+    right:0;
+}
+
+.chWrap .chart {
+    flex:1;
+    position:relative;
+    margin:0 100px;
+    max-width: calc(100% - 200px);
+}
+
+.chWrap .chart .yL {
+    width: 100%;
+    position:absolute;
+    top:50px;
+    left:0;
+    display: flex;
+    align-items: center;
+}
+
+.chWrap .chart .yL:after {
+    content:'';
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.chWrap .chart .yL p {
+    position:absolute;
+    right:101%;
+}
+
+.chWrap .chart .yMn {
+    top:auto;
+    bottom: 20px;
+}
+
+.chWrap .chart .chtBD {
+    overflow: hidden;
+    padding-top:50px;
+    width: 100%;
+    position:relative;
+    height: 500px;
+}
+
+.chWrap .chart .cht {
+    display: flex;
+    gap: 0 36px;
+    height: calc(100% - 50px);
+    position:absolute;
+    bottom:0;
+    left:0;
+    transition:all .5s;
+}
+
+.chWrap .chart .cht>div {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px 0;
+}
+
+.chWrap .chart .cht>div .stk {
+    width: 40px;
+    height: calc(100% - 20px);
+    margin-bottom: 20px;
+    background-color: #ccc;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    transition:all .5s;
+}
+
+.chWrap .chart .cht>div .stk span {
+    white-space: nowrap;
+    position:absolute;
+    bottom: 101%;
+    background-color: #fff;
+    padding:3px;
+    font-size: 10px;
+    color:#000;
+    border:1px solid #ccc;
+    display: none;
+}
+
+.chWrap .chart .cht>div .stk:hover span {
+    display: block;
+}
+
+.chWrap .chart .cht>div .str {
+    position:absolute;
+    bottom: 0;
+    font-size: 10px;
+}
+
+.spot.ui-draggable.ui-draggable-handle {
+    pointer-events: none;
+}

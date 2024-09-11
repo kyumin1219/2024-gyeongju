@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>천안투어</title>
+    <!-- 스타일 시트 -->
+    <link rel="stylesheet" href="./asset/css/index.css">
+    <!-- 스타일 시트 -->
+    <script src="./asset/js/jquery-3.5.1.min.js"></script>
+    <script src="./asset/js/jquery-ui.js"></script>
+    <script src="./asset/js/app.js"></script>
+</head>
+<body class="index">
+    <!-- 해더 -->
+    <header>
+        <div class="container fb">
+            <a href="./index.html" class="logo"><img src="./asset/img/logo(main).png" alt="img" title="img"></a>
+            <nav class="fb">
+                <ul class="mainTab f21 fb">
+                    <li><a href="#">경주여행</a>
+                        <ul>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="./sub1.html">여행코스추천</a></li>
+                            <li><a href="#">테마여행</a></li>
+                            <li><a href="#">경주의 자연</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">문화행사</a>
+                        <ul>
+                            <li><a href="#">이달의 축제행사</a></li>
+                            <li><a href="#">정기 축제행사</a></li>
+                            <li><a href="#">공연전시 정보</a></li>
+                            <li><a href="#">해외공연 정보</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./stamp.html">명소 알아보기</a></li>
+                    <li><a href="#">나의여행</a>
+                        <ul>
+                            <li><a href="#">투어택시예약</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="userTab fb f18">
+                    <li><label for="login">로그인</label></li>
+                    <li><span>|</span></li>
+                    <li><label for="sign">회원가입</label></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- 서브페이지 -->
+    <section class="cc mt20 tour">
+        <div class="container mt6">
+            <div class="fb">
+                <div class="middle">
+                    <h2 class="title3">HOTPLACE</h2>
+                    <div class="f hc mts">
+                        <p class="f18 cp3">핫플레이스 추천</p>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="contentWrap hWrap">
+                <div class="listWrap"></div>
+                <div class="vWrap">
+                    <div class="iWrap">
+                        <p class="aName"></p>
+                        <input type="text" class="hName" placeholder="핫플명">
+                        <textarea class="hCont" placeholder="내용"></textarea>
+                        <img src="./asset/img/spot.png" alt="" class="spot">
+                    </div>
+                    <div class="cWrap">
+                        <div class="pWrap"></div>
+                    </div>
+                    <div class="lWrap"></div>
+                </div>
+            </div>
+            <div class="middle mt6">
+                <h2 class="title3">KEYWORD</h2>
+                <div class="f hc mts">
+                    <p class="f18 cp3">키워드분석</p>
+                    <span></span>
+                </div>
+            </div>
+            <div class="contentWrap">
+                <div class="kWrap">
+                    <div class="wcWrap"></div>
+                    <div class="tWrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>키워드</th>
+                                    <th>빈도수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="middle mt6">
+                <h2 class="title3">CHART</h2>
+                <div class="f hc mts">
+                    <p class="f18 cp3">차트</p>
+                    <span></span>
+                </div>
+            </div>
+            <div class="contentWrap">
+                <div class="chWrap">
+                    <a href="javascript:;" class="arrows left" onclick="kw.mvChart('left');">&lt;</a>
+                    <div class="chart">
+                        <div class="yL yMx"><p>0</p></div>
+                        <div class="yL yMn"><p>0</p></div>
+                        <div class="chtBD">
+                            <div class="cht"></div>
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="arrows right" onclick="kw.mvChart('right');">&gt;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="cc">
+        <!-- 푸터 -->
+        <div class="container fla">
+            <img src="./asset/img/logo(footer).png" class="logo" alt="img" title="img">
+            <div class="f14 mt1">
+                <p class="mts">[38102] 경상북도 경주시 양정로 260 (동천동, 경주시청)대표전화 : 054-779-8585</p>
+                <p class="mts">관광안내전화 1330 응급전화안내 1339</p>
+            </div>
+            <div>
+                <div class="fe">
+                    <img src="./asset/img/footer/SNS_01.png" alt="" style="width: 30px;">
+                    <img src="./asset/img/footer/SNS_02.png" alt="" style="width: 30px;">
+                    <img src="./asset/img/footer/SNS_03.png" alt="" style="width: 30px;">
+                    <img src="./asset/img/footer/SNS_04.png" alt="" style="width: 30px;">
+                </div>
+            <p class="mts">Copyright 2024 Gyeongju Tourguide. All rights reserved.</p>
+            </div>
+        </div>
+        <!-- 푸터 -->
+    </footer>
+    <script>
+        $(function () {
+            hp.set();
+            kw.set();
+        });
+    </script>
+</body>
+</html>
