@@ -352,3 +352,9 @@
 .spot.ui-draggable.ui-draggable-handle {
     pointer-events: none;
 }
+
+.hotplaceImg {
+    border-radius: 25px;
+    margin: 8px;
+    box-shadow: 0 0 18px rgb(151, 151, 151);
+}

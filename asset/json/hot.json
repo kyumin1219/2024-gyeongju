@@ -3,43 +3,51 @@
   "imgs": [
     {
       "id": "1",
-      "name": "호수3.jpg"
+      "name": "1.jpg"
     },
     {
       "id": "2",
-      "name": "명소2.jpg"
+      "name": "2.jpg"
     },
     {
       "id": "3",
-      "name": "명소3.jpg"
+      "name": "3.jpg"
     },
     {
       "id": "4",
-      "name": "바다1.jpg"
+      "name": "4.jpg"
     },
     {
       "id": "5",
-      "name": "바다2.jpg"
+      "name": "5.jpg"
     },
     {
       "id": "6",
-      "name": "산1.jpg"
+      "name": "6.jpg"
     },
     {
       "id": "7",
-      "name": "산2.jpg"
+      "name": "7.jpg"
     },
     {
       "id": "8",
-      "name": "산3.jpg"
+      "name": "8.jpg"
     },
     {
       "id": "9",
-      "name": "호수1.jpg"
+      "name": "9.jpg"
     },
     {
       "id": "10",
-      "name": "호수2.jpg"
+      "name": "10.jpg"
+    },
+    {
+      "id": "11",
+      "name": "11.jpg"
+    },
+    {
+      "id": "12",
+      "name": "12.jpg"
     }
   ]
 }

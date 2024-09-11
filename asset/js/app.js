@@ -8,7 +8,7 @@ var hp = {
 
         $.getJSON('./asset/json/hot.json', data => {
             data.imgs.forEach((val, key) => {
-                $('.hWrap .listWrap').append(`<div onclick="hp.setImg('./asset/img/${data.imgdir}${val.name}', '${val.name.replace('.png', '').replace('.jpg', '')}');" style="background: url(/asset/img/${data.imgdir}${val.name}) no-repeat -200px -200px/800px;"></div>`);
+                $('.hWrap .listWrap').append(`<div class="hotplaceImg" onclick="hp.setImg('./asset/img/${data.imgdir}${val.name}', '${val.name.replace('.png', '').replace('.jpg', '')}');" style="background: url(./asset/img/${data.imgdir}${val.name}) no-repeat -200px -200px/800px;"></div>`);
                 if (val.name.indexOf(hp.lData.tName) != -1) hp.setImg(`./asset/img/${data.imgdir}${val.name}`, `${val.name.replace('.png', '').replace('.jpg', '')}`);
             });
         });
